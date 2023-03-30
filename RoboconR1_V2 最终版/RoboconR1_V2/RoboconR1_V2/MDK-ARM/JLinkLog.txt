@@ -1,0 +1,40 @@
+
+T4E7C 000:297 SEGGER J-Link V6.12 Log File (0005ms, 0032ms total)
+T4E7C 000:297 DLL Compiled: Nov 25 2016 18:08:26 (0005ms, 0032ms total)
+T4E7C 000:297 Logging started @ 2022-07-03 12:44 (0005ms, 0032ms total)
+T4E7C 000:302 JLINK_SetWarnOutHandler(...) (0000ms, 0032ms total)
+T4E7C 000:302 JLINK_OpenEx(...)
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+S/N: 20090929
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFullWEBSRV Webserver running on local port 19080 (0011ms, 0043ms total)
+T4E7C 000:302   returns O.K. (0011ms, 0043ms total)
+T4E7C 000:313 JLINK_SetErrorOutHandler(...) (0000ms, 0043ms total)
+T4E7C 000:313 JLINK_ExecCommand("ProjectFile = "C:\Users\86173\Desktop\RoboconR1_V2\RoboconR1_V2\MDK-ARM\JLinkSettings.ini"", ...). C:\Program Files\SEGGER\JLink\JLinkDevices.xml evaluated successfully.  returns 0x00 (0729ms, 0772ms total)
+T4E7C 001:042 JLINK_ExecCommand("Device = STM32F405RGTx", ...). Device "STM32F405RG" selected.  returns 0x00 (0001ms, 0773ms total)
+T4E7C 001:043 JLINK_ExecCommand("DisableConnectionTimeout", ...).   returns 0x01 (0000ms, 0773ms total)
+T4E7C 001:043 JLINK_GetHardwareVersion()  returns 0x11170 (0000ms, 0773ms total)
+T4E7C 001:043 JLINK_GetDLLVersion()  returns 61200 (0000ms, 0773ms total)
+T4E7C 001:043 JLINK_GetFirmwareString(...) (0000ms, 0773ms total)
+T4E7C 001:043 JLINK_GetDLLVersion()  returns 61200 (0000ms, 0773ms total)
+T4E7C 001:043 JLINK_GetCompileDateTime() (0000ms, 0773ms total)
+T4E7C 001:043 JLINK_GetFirmwareString(...) (0000ms, 0773ms total)
+T4E7C 001:043 JLINK_GetHardwareVersion()  returns 0x11170 (0000ms, 0773ms total)
+T4E7C 001:043 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0001ms, 0774ms total)
+T4E7C 001:044 JLINK_SetSpeed(2000) (0000ms, 0774ms total)
+T4E7C 001:044 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 0774ms total)
+T4E7C 001:044 JLINK_Reset() >0x108 TIF> >0x108 TIF> >0x108 TIF> >0x108 TIF> >0x108 TIF> >0x108 TIF> >0x108 TIF> >0x108 TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x108 TIF> >0x108 TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed. >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x108 TIF> >0x108 TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x108 TIF>
+ >0x108 TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed.JLINK_GetId() >0x108 TIF> >0x108 TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x108 TIF> >0x108 TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed. >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x108 TIF> >0x108 TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x108 TIF> >0x108 TIF>
+
+  ***** Error: STM32: Connecting to CPU via connect under reset failed.  returns 0x00000000 (0677ms, 2446ms total)
+T4E7C 002:717 JLINK_GetId() >0x108 TIF> >0x108 TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x108 TIF> >0x108 TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed. >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x108 TIF> >0x108 TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x108 TIF> >0x108 TIF>
+  ***** Error: 
+STM32: Connecting to CPU via connect under reset failed.  returns 0x00000000 (0675ms, 3121ms total)
+T4E7C 003:401 JLINK_GetFirmwareString(...) (0000ms, 3121ms total)
+T4E7C 004:886 JLINK_Close() (0014ms, 3135ms total)
+T4E7C 004:886  (0014ms, 3135ms total)
+T4E7C 004:886 Closed (0014ms, 3135ms total)

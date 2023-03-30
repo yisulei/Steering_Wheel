@@ -1,0 +1,96 @@
+#VRML_OBJ R2021a utf8
+DEF LF_Motor HingeJoint {
+  jointParameters HingeJointParameters {
+    position -2.6263599350998844e-09
+    axis 0 0 2
+    anchor 0.37 0.375 0
+  }
+  device [
+    PositionSensor {
+      name "position_sensor_LF"
+    }
+    RotationalMotor {
+      name "LF_turn"
+      maxVelocity 500
+      maxTorque 30
+    }
+  ]
+  endPoint Solid {
+    translation 0.369999999671705 0.3750000003151632 0
+    rotation 0.2810860238048955 -0.6785950574695386 -0.6786010574700481 2.593559999999999
+    children [
+      Shape {
+        appearance DEF tian PBRAppearance {
+          baseColor 1 1 0.498039
+          roughness 1
+          metalness 0
+        }
+        geometry DEF Link1 Mesh {
+          url [
+            "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link1.STL"
+          ]
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          position 7.253799848191569e-10
+          axis -1 0 1
+          anchor 0 -0.014 0
+        }
+        device [
+          RotationalMotor {
+            name "LF_move"
+            maxVelocity 1000
+            maxTorque 10000
+          }
+        ]
+        endPoint Solid {
+          translation -7.725794989029922e-06 -0.013993555323337094 -3.0964218099448313e-06
+          rotation -0.6785990571765258 -0.6785970575863062 0.28108602426007906 2.5935653081631678
+          children [
+            DEF Wheel Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0.0823529
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.02
+                radius 0.042
+              }
+            }
+          ]
+          name "Link2"
+          boundingObject USE Wheel
+          physics Physics {
+            density -1
+            mass 0.053529
+            centerOfMass [
+              -0.001368 0 0.001381
+            ]
+            inertiaMatrix [
+              4.8489e-05 3.5558e-05 4.8718e-05
+              -7.0031e-10 -1.3045e-05 7.1354e-10
+            ]
+          }
+        }
+      }
+    ]
+    name "Link1"
+    boundingObject DEF Link1 Mesh {
+      url [
+        "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link1.STL"
+      ]
+    }
+    physics Physics {
+      density -1
+      mass 0.10873
+      centerOfMass [
+        -0.000962 0.019194 0.000996
+      ]
+      inertiaMatrix [
+        6.9317e-05 0.00013609 6.929e-05
+        -1.1468e-08 1.2018e-06 1.1608e-08
+      ]
+    }
+  }
+}

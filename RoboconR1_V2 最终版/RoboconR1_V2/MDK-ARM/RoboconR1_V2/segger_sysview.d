@@ -1,0 +1,12 @@
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\SEGGER\SEGGER_SYSVIEW.c
+roboconr1_v2\segger_sysview.o: D:\Hale_liu\tools\K\ARM\ARMCC\Bin\..\include\string.h
+roboconr1_v2\segger_sysview.o: D:\Hale_liu\tools\K\ARM\ARMCC\Bin\..\include\stdlib.h
+roboconr1_v2\segger_sysview.o: D:\Hale_liu\tools\K\ARM\ARMCC\Bin\..\include\stdarg.h
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\SEGGER\SEGGER_SYSVIEW_Int.h
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\SEGGER\SEGGER_SYSVIEW.h
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\SEGGER\SEGGER.h
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\Config\Global.h
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\SEGGER\SEGGER_SYSVIEW_ConfDefaults.h
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\Config\SEGGER_SYSVIEW_Conf.h
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\Config\SEGGER_RTT_Conf.h
+roboconr1_v2\segger_sysview.o: ..\..\..\..\tools\SystemView\Src\SEGGER\SEGGER_RTT.h

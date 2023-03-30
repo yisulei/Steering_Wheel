@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Yang Yige, North China University of Technology, LIC=X96CK-ZZ44H-GK6BG-VB6C2-GU9X6-PV4QW
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.32.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.97.0.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\yangy\OneDrive - mail.ncut.edu.cn\文档\WeChat Files\wxid_2rj2jzav6i0x22\FileStorage\File\2022-07\r2基本完成版3.0直线版\r2基本完成版3.0直线版\MDK-ARM\Four_SteeringWheel.uvprojx
+Project File Date:  07/21/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Four_SteeringWheel'
+compiling Chassis_behavior.c...
+..\Behavior\Chassis_behavior.h(84): warning:  #1295-D: Deprecated declaration Auto_Catch_Task - give arg types
+  void Auto_Catch_Task();
+..\Behavior\Chassis_behavior.h(86): warning:  #1295-D: Deprecated declaration Auto_Put_Task - give arg types
+  void Auto_Put_Task();
+..\Behavior\Chassis_behavior.h(88): warning:  #1295-D: Deprecated declaration Task_Flag_Reset - give arg types
+  void Task_Flag_Reset();
+..\Behavior\Chassis_behavior.c(737): warning:  #188-D: enumerated type mixed with another type
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, !Cylinder_State); //鍚哥洏浼稿嚭
+..\Behavior\Chassis_behavior.c(741): warning:  #188-D: enumerated type mixed with another type
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, Cylinder_State); //鍚哥洏鏀跺洖
+..\Behavior\Chassis_behavior.c(764): warning:  #188-D: enumerated type mixed with another type
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, !Air_Rump_State); //姘旀车鐘舵�佸弽杞?
+..\Behavior\Chassis_behavior.c(768): warning:  #188-D: enumerated type mixed with another type
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, Air_Rump_State); //姘旀车鐘舵�佷繚鎸?//浠庤嚜鍔ㄥ垏鎹㈣繃鏉ヤ互鍚庣姸鎬佷繚鎸?
+..\Behavior\Chassis_behavior.c(772): warning:  #188-D: enumerated type mixed with another type
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, Air_Rump_State);
+..\Behavior\Chassis_behavior.c(776): warning:  #188-D: enumerated type mixed with another type
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, !Air_Rump_State);
+..\Behavior\Chassis_behavior.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=37870 RO-data=906 RW-data=248 ZI-data=7616  
+FromELF: creating hex file...
+"Four_SteeringWheel\Four_SteeringWheel.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Four_SteeringWheel
+  C:\Users\yangy\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\yangy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>

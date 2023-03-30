@@ -1,0 +1,119 @@
+#VRML_OBJ R2021a utf8
+Robot {
+  translation 1.09 0.06 6.11772e-08
+  rotation 1 0 0 -1.5707953071795862
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 2
+      }
+      device [
+        RotationalMotor {
+          name "turn"
+        }
+      ]
+      endPoint Solid {
+        rotation 0.7309071181281216 0.48258507799468275 0.4825830779943595 1.879257
+        children [
+          Shape {
+            appearance DEF tian PBRAppearance {
+              baseColor 0.141176 0.564706 0.933333
+              roughness 1
+              metalness 0
+            }
+            geometry DEF Link1 Mesh {
+              url [
+                "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link1.STL"
+              ]
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.703989 -4e-06 -0.710211
+              anchor 0 -0.014 0
+            }
+            device [
+              RotationalMotor {
+                name "move"
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "joint move_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.014 0
+              rotation -0.7039849193395245 -5.199999404199702e-05 0.71021491862571 0.48168700000000036
+              children [
+                Shape {
+                  appearance DEF yixia PBRAppearance {
+                    baseColor 0.537255 0.933333 0.0196078
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF Link2 Mesh {
+                    url [
+                      "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link2.STL"
+                    ]
+                  }
+                }
+              ]
+              name "Link2"
+              boundingObject USE Link2
+              physics Physics {
+                density -1
+                mass 0.053529
+                centerOfMass [
+                  -0.001368 0 0.001381
+                ]
+                inertiaMatrix [
+                  4.8489e-05 3.5558e-05 4.8718e-05
+                  -7.0031e-10 -1.3045e-05 7.1354e-10
+                ]
+              }
+            }
+          }
+        ]
+        name "Link1"
+        boundingObject USE Link1
+        physics Physics {
+          density -1
+          mass 0.10873
+          centerOfMass [
+            -0.000962 0.019194 0.000996
+          ]
+          inertiaMatrix [
+            6.9317e-05 0.00013609 6.929e-05
+            -1.1468e-08 1.2018e-06 1.1608e-08
+          ]
+        }
+      }
+    }
+    Shape {
+      appearance DEF suibian PBRAppearance {
+        baseColor 0 0.0117647 0.933333
+        roughness 1
+        metalness 0
+      }
+      geometry DEF base_link Mesh {
+        url [
+          "C:/Users/78568/Desktop/fangzhenduolunx/meshes/base_link.STL"
+        ]
+      }
+    }
+  ]
+  name "Fangzhenduolun"
+  boundingObject USE base_link
+  physics Physics {
+    density -1
+    mass 0.29072
+    centerOfMass [
+      0.010263 0.045561 -0.005254
+    ]
+    inertiaMatrix [
+      0.00039964 0.00081208 0.00042596
+      -1.5753e-09 2.3392e-05 6.8457e-08
+    ]
+  }
+  controller "my_controller"
+}

@@ -1,0 +1,129 @@
+#VRML_SIM R2021a utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the Fanzhuan
+# Extracted from: fanzhuan.urdf
+
+PROTO Fanzhuan [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 1 0 0
+  field  SFString    name            "Fanzhuan"  # Is `Robot.name`.
+  field  SFString    controller      "void"      # Is `Robot.controller`.
+  field  MFString    controllerArgs  []          # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""          # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE       # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE        # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE       # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Shape {
+        appearance DEF xjb PBRAppearance {
+          baseColor 0.752940 0.752940 0.752940
+          transparency 0.000000
+          roughness 1.000000
+          metalness 0
+          emissiveColor 0.000000 0.000000 0.000000
+        }
+        geometry DEF base_link Mesh {
+          url "C:/Users/78568/Desktop/fagnzhen/fanzhuan/meshes/base_link.STL"
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis -0.000004 0.000000 -1.000000
+          anchor 0.081000 0.000000 0.000000
+          dampingConstant 0.0
+          staticFriction 0.0
+        }
+        device [
+          RotationalMotor {
+            name "joint1"
+            maxTorque 10000
+          }
+          PositionSensor {
+            name "joint1_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation 0.081000 0.000000 0.000000
+          rotation 0.604519 0.518759 -0.604521 2.184512
+          children [
+            Shape {
+              appearance DEF tian PBRAppearance {
+                baseColor 1.000000 1.000000 1.000000
+                transparency 0.000000
+                roughness 1.000000
+                metalness 0
+                emissiveColor 0.000000 0.000000 0.000000
+              }
+              geometry DEF Link1 Mesh {
+                url "C:/Users/78568/Desktop/fagnzhen/fanzhuan/meshes/Link1.STL"
+              }
+            }
+            Solid {
+              translation 0.032800 -0.026252 -0.290420
+              rotation 0.000002 0.574669 -0.818386 3.141599
+              children [
+                Shape {
+                  appearance DEF jiuxing PBRAppearance {
+                    baseColor 1.000000 1.000000 1.000000
+                    transparency 0.000000
+                    roughness 1.000000
+                    metalness 0
+                    emissiveColor 0.000000 0.000000 0.000000
+                  }
+                  geometry DEF Link2 Mesh {
+                    url "C:/Users/78568/Desktop/fagnzhen/fanzhuan/meshes/Link2.STL"
+                  }
+                }
+              ]
+              name "Link2"
+              boundingObject USE Link2
+              physics Physics {
+                density -1
+                mass 0.039407
+                centerOfMass [ -0.017039 -0.000023 0.000000 ]
+                inertiaMatrix [
+                  9.110700e-06 6.500300e-06 6.496100e-06
+                  2.090100e-09 -3.836100e-23 8.470300e-22
+                ]
+              }
+            }
+          ]
+          name "Link1"
+          boundingObject USE Link1
+          physics Physics {
+            density -1
+            mass 0.199830
+            centerOfMass [ 0.045289 -0.008258 -0.091351 ]
+            inertiaMatrix [
+              1.319800e-03 1.272200e-03 6.538100e-05
+              -1.435900e-09 -1.881700e-10 -1.099900e-04
+            ]
+          }
+        }
+      }
+    ]
+    name IS name 
+    boundingObject USE base_link
+    physics Physics {
+      density -1
+      mass 0.249650
+      centerOfMass [ -0.045427 -0.022468 -0.000672 ]
+      inertiaMatrix [
+        4.506900e-05 2.352600e-04 2.130400e-04
+        -1.072600e-07 -4.174800e-07 2.175900e-08
+      ]
+    }
+  }
+}

@@ -1,0 +1,481 @@
+#VRML_OBJ R2021a utf8
+Robot {
+  translation 0.019997126048181345 0.05581176858536377 -1.9164572653683487e-05
+  rotation -0.9999999995895522 2.4364315163666614e-05 1.5075660870380447e-05 1.5708409345873302
+  children [
+    DEF Body Group {
+      children [
+        Transform {
+          translation 0 0 0.06
+          children [
+            DEF body Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.5 0.5 0.005
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 0.01
+          children [
+            DEF body Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.5 0.5 0.005
+              }
+            }
+          ]
+        }
+        DEF RF Transform {
+          translation 0.25 -0.25 0
+          rotation 0 0 1 1.83259
+          children [
+            Shape {
+              appearance DEF suibian PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry DEF base_link Mesh {
+                url [
+                  "C:/Users/78568/Desktop/fangzhenduolunx/meshes/base_link.STL"
+                ]
+              }
+            }
+          ]
+        }
+        DEF RB Transform {
+          translation -0.25 -0.25 0
+          rotation 0 0 1 0.523597
+          children [
+            Shape {
+              appearance DEF suibian PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry DEF base_link Mesh {
+                url [
+                  "C:/Users/78568/Desktop/fangzhenduolunx/meshes/base_link.STL"
+                ]
+              }
+            }
+          ]
+        }
+        DEF LF Transform {
+          translation 0.25 0.25 0
+          rotation 0 0 1 -2.6179953071795863
+          children [
+            Shape {
+              appearance DEF suibian PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry DEF base_link Mesh {
+                url [
+                  "C:/Users/78568/Desktop/fangzhenduolunx/meshes/base_link.STL"
+                ]
+              }
+            }
+          ]
+        }
+        DEF LB Transform {
+          translation -0.25 0.25 0
+          rotation 0 0 -1 1.309
+          children [
+            Shape {
+              appearance DEF suibian PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry DEF base_link Mesh {
+                url [
+                  "C:/Users/78568/Desktop/fangzhenduolunx/meshes/base_link.STL"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    DEF LF_Motor HingeJoint {
+      jointParameters HingeJointParameters {
+        position -2.6263599350998844e-09
+        axis 0 0 2
+        anchor 0.25 0.25 0
+      }
+      device [
+        PositionSensor {
+          name "position_sensor_LF"
+        }
+        RotationalMotor {
+          name "LF_turn"
+        }
+      ]
+      endPoint Solid {
+        translation 0.25 0.25 0
+        rotation 0.28108491111034856 -0.6785967879225613 -0.6785997879216216 2.5935653089618333
+        children [
+          Shape {
+            appearance DEF tian PBRAppearance {
+              baseColor 1 1 0.498039
+              roughness 1
+              metalness 0
+            }
+            geometry DEF Link1 Mesh {
+              url [
+                "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link1.STL"
+              ]
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position 7.253799848191569e-10
+              axis 0.703989 -4e-06 -0.710211
+              anchor 0 -0.014 0
+            }
+            device [
+              RotationalMotor {
+                name "LF_move"
+                maxTorque 10000
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.014 0
+              rotation 0.3574091054528703 0.3574091048281174 0.8628542536983537 1.7177699997379943
+              children [
+                DEF Wheel Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 1 0.0823529
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.042
+                  }
+                }
+              ]
+              name "Link2"
+              boundingObject USE Wheel
+              physics Physics {
+                density -1
+                mass 0.053529
+                centerOfMass [
+                  -0.001368 0 0.001381
+                ]
+                inertiaMatrix [
+                  4.8489e-05 3.5558e-05 4.8718e-05
+                  -7.0031e-10 -1.3045e-05 7.1354e-10
+                ]
+              }
+            }
+          }
+        ]
+        name "Link1"
+        boundingObject DEF Link1 Mesh {
+          url [
+            "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link1.STL"
+          ]
+        }
+        physics Physics {
+          density -1
+          mass 0.10873
+          centerOfMass [
+            -0.000962 0.019194 0.000996
+          ]
+          inertiaMatrix [
+            6.9317e-05 0.00013609 6.929e-05
+            -1.1468e-08 1.2018e-06 1.1608e-08
+          ]
+        }
+      }
+    }
+    DEF RF_Motor HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2.6254738730476855e-09
+        axis 0 0 2
+        anchor 0.25 -0.25 0
+      }
+      device [
+        PositionSensor {
+          name "position_sensor_RF"
+        }
+        RotationalMotor {
+          name "RF_turn"
+        }
+      ]
+      endPoint Solid {
+        translation 0.25 -0.25 0
+        rotation 0.28108491303307626 -0.6785967875243492 -0.678599787523413 2.59356530539794
+        children [
+          Shape {
+            appearance DEF tian PBRAppearance {
+              baseColor 1 1 0.498039
+              roughness 1
+              metalness 0
+            }
+            geometry DEF Link1 Mesh {
+              url [
+                "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link1.STL"
+              ]
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position 7.253730523718496e-10
+              axis 0.703989 -4e-06 -0.710211
+              anchor 0 -0.014 0
+            }
+            device [
+              RotationalMotor {
+                name "RF_move"
+                maxTorque 10000
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.014 0
+              rotation 0.35740910545286697 0.35740910482811983 0.862854253698354 1.717769999737997
+              children [
+                DEF Wheel Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 1 0.0823529
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.042
+                  }
+                }
+              ]
+              name "Link2"
+              boundingObject USE Wheel
+              physics Physics {
+                density -1
+                mass 0.053529
+                centerOfMass [
+                  -0.001368 0 0.001381
+                ]
+                inertiaMatrix [
+                  4.8489e-05 3.5558e-05 4.8718e-05
+                  -7.0031e-10 -1.3045e-05 7.1354e-10
+                ]
+              }
+            }
+          }
+        ]
+        name "Link1(1)"
+        boundingObject USE Link1
+        physics Physics {
+          density -1
+          mass 0.10873
+          centerOfMass [
+            -0.000962 0.019194 0.000996
+          ]
+          inertiaMatrix [
+            6.9317e-05 0.00013609 6.929e-05
+            -1.1468e-08 1.2018e-06 1.1608e-08
+          ]
+        }
+      }
+    }
+    DEF RB_Motor HingeJoint {
+      jointParameters HingeJointParameters {
+        position -2.6276225294232073e-09
+        axis 0 0 2
+        anchor -0.25 -0.25 0
+      }
+      device [
+        PositionSensor {
+          name "position_sensor_RB"
+        }
+        RotationalMotor {
+          name "RB_turn"
+        }
+      ]
+      endPoint Solid {
+        translation -0.25 -0.25 0
+        rotation 0.281084911109887 -0.6785967879226591 -0.6785997879217148 2.593570001783104
+        children [
+          Shape {
+            appearance DEF tian PBRAppearance {
+              baseColor 1 1 0.498039
+              roughness 1
+              metalness 0
+            }
+            geometry DEF Link1 Mesh {
+              url [
+                "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link1.STL"
+              ]
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position 7.253654138919395e-10
+              axis 0.703989 -4e-06 -0.710211
+              anchor 0 -0.014 0
+            }
+            device [
+              RotationalMotor {
+                name "RB_move"
+                maxTorque 10000
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.014 0
+              rotation 0.3574091054528632 0.3574091048281229 0.8628542536983542 1.717769999737999
+              children [
+                DEF Wheel Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 1 0.0823529
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.042
+                  }
+                }
+              ]
+              name "Link2"
+              boundingObject USE Wheel
+              physics Physics {
+                density -1
+                mass 0.053529
+                centerOfMass [
+                  -0.001368 0 0.001381
+                ]
+                inertiaMatrix [
+                  4.8489e-05 3.5558e-05 4.8718e-05
+                  -7.0031e-10 -1.3045e-05 7.1354e-10
+                ]
+              }
+            }
+          }
+        ]
+        name "Link1(2)"
+        boundingObject USE Link1
+        physics Physics {
+          density -1
+          mass 0.10873
+          centerOfMass [
+            -0.000962 0.019194 0.000996
+          ]
+          inertiaMatrix [
+            6.9317e-05 0.00013609 6.929e-05
+            -1.1468e-08 1.2018e-06 1.1608e-08
+          ]
+        }
+      }
+    }
+    DEF LB_Motor HingeJoint {
+      jointParameters HingeJointParameters {
+        position -2.62621361308139e-09
+        axis 0 0 2
+        anchor -0.25 0.25 0
+      }
+      device [
+        PositionSensor {
+          name "position_sensor_LB"
+        }
+        RotationalMotor {
+          name "LB_turn"
+        }
+      ]
+      endPoint Solid {
+        translation -0.25 0.25 -5.47798e-07
+        rotation 0.2810849111104021 -0.6785967879225502 -0.6785997879216104 2.5935653089617343
+        children [
+          Shape {
+            appearance DEF tian PBRAppearance {
+              baseColor 1 1 0.498039
+              roughness 1
+              metalness 0
+            }
+            geometry DEF Link1 Mesh {
+              url [
+                "C:/Users/78568/Desktop/fangzhenduolunx/meshes/Link1.STL"
+              ]
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position 7.253810490826473e-10
+              axis 0.703989 -4e-06 -0.710211
+              anchor 0 -0.014 0
+            }
+            device [
+              RotationalMotor {
+                name "LB_move"
+                maxTorque 10000
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.014 0
+              rotation 0.3574091054528708 0.3574091048281169 0.8628542536983536 1.7177699997379938
+              children [
+                DEF Wheel Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 1 0.0823529
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.042
+                  }
+                }
+              ]
+              name "Link2"
+              boundingObject USE Wheel
+              physics Physics {
+                density -1
+                mass 0.053529
+                centerOfMass [
+                  -0.001368 0 0.001381
+                ]
+                inertiaMatrix [
+                  4.8489e-05 3.5558e-05 4.8718e-05
+                  -7.0031e-10 -1.3045e-05 7.1354e-10
+                ]
+              }
+            }
+          }
+        ]
+        name "Link1(3)"
+        boundingObject USE Link1
+        physics Physics {
+          density -1
+          mass 0.10873
+          centerOfMass [
+            -0.000962 0.019194 0.000996
+          ]
+          inertiaMatrix [
+            6.9317e-05 0.00013609 6.929e-05
+            -1.1468e-08 1.2018e-06 1.1608e-08
+          ]
+        }
+      }
+    }
+  ]
+  name "Fangzhenduolun"
+  boundingObject USE Body
+  physics Physics {
+    density -1
+    mass 0.29072
+    centerOfMass [
+      0.010263 0.045561 -0.005254
+    ]
+    inertiaMatrix [
+      0.00039964 0.00081208 0.00042596
+      -1.5753e-09 2.3392e-05 6.8457e-08
+    ]
+  }
+  controller "duolun"
+}
